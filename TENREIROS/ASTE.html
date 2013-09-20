@@ -1,0 +1,154 @@
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ramon Tenreiro | Sharing creations with you </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="site to share creations of Ramon Tenreiro">
+    <meta name="author" content="Ramon Tenreiro">
+    <meta property='og:title' content='Ramon Tenreiro | Sharing creations with you .'/>
+    <meta property='og:description' content='Architecture. Painting. Games'/>
+    <meta property='og:url' content='http://www.tenreiros.com'/>
+    <meta property='og:site_name' content='Ramon Tenreiro'/>
+    <meta property='og:type' content='website'/>
+
+    <!-- Le styles -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="assets/css/docs.css" rel="stylesheet">
+    <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+    <link rel="apple-touch-icon-precomposed" href="images/favicon32.png">
+    <link rel="shortcut icon" href="images/favicon32.png">
+   <script src="script/soundmanager2.js"></script>
+      <script>
+			var soundManagerLoaded = false;
+			soundManager.flashVersion = 9;
+			soundManager.useFastPolling = true;
+			soundManager.useHighPerformance = true;
+			soundManager.onready(function() {
+			   soundManagerLoaded = true;
+			});
+			soundManager.ontimeout(function() {
+			   soundManagerLoaded = true;
+			   soundManager = false;
+			});
+			soundManager.url = 'swf/';
+	  </script>
+	<style type="text/css">	      
+	.space{
+   		background-image: url(images/asteroid_bg.jpg);
+   		background-repeat: no-repeat; 
+	}
+	canvas{
+   		background-color: #000;
+   		border: 1px solid #888;
+		margin: 40px
+	}
+		h1 {
+			font-size: 24px;
+			}
+		.jumbotron {
+			padding: 0px 0;
+			
+			}	
+				
+</style>
+
+<script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-42970867-1']);
+      _gaq.push(['_trackPageview']);
+     (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+    </script>
+   </head>
+    <body data-spy="scroll" data-target=".bs-docs-sidebar" body onload="init()">
+
+<!-- Subhead
+================================================== -->
+<header class="jumbotron subhead" id="overview">
+  <div class="container">
+    <h1>Asteroides</h1>
+    <p class="lead">por Ramon Tenreiro</p>
+    
+  </div>
+</header>
+<!-- Main Container (Play)
+================================================== -->
+<div class="navbar navbar-inverse navbar-fixed-botton">
+	<div class="navbar-inner">
+       <div class="card">
+		  <div class="container">
+			<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <button class="btn btn-danger" id="B7"><a href="games2.html">Regresar</a></button>  
+			</button>
+		</div>
+	</div>
+	</div>
+</div>                            
+<div class="accordion-heading"><a class="accordion-toggle" data-toggle="collapse" href="#collapseOne"><B>MOSTRAR TABLERO</B></a> </div>
+    <div id="collapseOne" class="accordion-body collapse in">
+      <div class="accordion-inner">
+       <div class="row-fluid"> 
+       <div class="span6 offset1">
+              <p class="left heading">Instrucciones:</p>
+              <p>Flechas Izquierda y derecha. Direccion de la Nave</p>
+              <p>Flechas arriba y abajo: Acelerar y Escudo</p>
+              <p>Barra espaciadora:Disparar</p>
+              <p>Z: Bombas</p>
+         </div>     
+       </div> 
+     </div>
+     </div> 
+     <div class="space">             
+     <div class="row-fluid"> 
+     	<div class="span6 offset1" >
+            <canvas class="box-shadow" id="canvas" width="640" height="640"></canvas> 
+    	</div> 
+       </div>
+      </div>  
+           <!-- Footer
+        ================================================== -->
+        <footer class="footer">
+            <p>Designed and built by Ramon Tenreiro.&copy; 2013 </p>
+        </footer>   
+     </div><!-- Container -->
+    
+    
+    <!-- Le javascript
+    ================================================== -->
+   <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap-transition.js"></script>
+    <script src="assets/js/bootstrap-alert.js"></script>
+    <script src="assets/js/bootstrap-modal.js"></script>
+    <script src="assets/js/bootstrap-dropdown.js"></script>
+    <script src="assets/js/bootstrap-scrollspy.js"></script>
+    <script src="assets/js/bootstrap-tab.js"></script>
+    <script src="assets/js/bootstrap-tooltip.js"></script>
+    <script src="assets/js/bootstrap-popover.js"></script>
+    <script src="assets/js/bootstrap-button.js"></script>
+    <script src="assets/js/bootstrap-collapse.js"></script>
+    <script src="assets/js/bootstrap-carousel.js"></script>
+    <script src="assets/js/bootstrap-typeahead.js"></script>
+    
+	<script src="script/mathlib.js"></script>
+     <script src="script/gamelib.js"></script>
+     <script src="script/asteroids_main.js"></script>
+     <script src="script/asteroids_player.js"></script>
+     <script src="script/asteroids_weapons.js"></script>
+     <script src="script/asteroids_enemies.js"></script>
+     <script src="script/asteroids_effects.js"></script>
+     <script src="script/asteroids_prerender.js"></script>
+   
+   <!--<script>
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+   ga('create', 'UA-42970867-1', 'tenreiros.com');
+   ga('send', 'pageview');
+   </script>-->
+  </body>
+</html>>

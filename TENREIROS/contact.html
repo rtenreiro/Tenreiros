@@ -1,0 +1,301 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 oldie"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title> Ramon Tenreiro | Sharing creations with you . </title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" 
+
+<meta name="Keywords" content="Tenreiro, Architecture, Painting, Building, Games"/>
+<meta name="description" content="site to share creations of Ramon Tenreiro"/>
+<meta name="Author" content="Ramon Tenreiro" />
+<meta name="robots" content="index, follow"/>
+<meta property='og:title' content='Ramon Tenreiro | Sharing creations with you .'/>
+<meta property='og:description' content='Architecture. Painting. Games'/>
+<meta property='og:url' content='http://www.tenreiros.com'/>
+<meta property='og:site_name' content='Ramon Tenreiro'/>
+<meta property='og:type' content='website'/>
+<link href="boilerplate.css" rel="stylesheet" type="text/css">
+<!--<link href="rtrespon.css" rel="stylesheet" type="text/css">
+<link href="estilo_RT_html5.css" rel="stylesheet" type="text/css">
+
+<script src="respond.min.js"></script>
+ Le styles -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="assets/css/docs.css" rel="stylesheet">
+    <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons 
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">-->
+    <link rel="apple-touch-icon-precomposed" href="images/favicon32.png">
+    <link rel="shortcut icon" href="images/favicon32.png">
+<style css>
+/* contact form
+#####################################################################################
+*/
+#input, #contact-form, #contact-form textarea {
+    width:80%;
+    background:#efefef;
+    border:1px solid #dedede;
+    padding:10px;
+    margin-top:3px;
+    font-size:0.9em;
+    color:#3a3a3a;
+    border-radius:5px;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form input[type="tel"],
+#contact-form input[type="url"],
+#contact-form textarea {
+  width:300px;
+  box-sizing: 300 px;
+    box-shadow:inset 0 1px 2px #DDD, 0 1px 0 #FFF;
+    -webkit-box-shadow:inset 0 1px 2px #DDD, 0 1px 0 #FFF;
+    -moz-box-shadow:inset 0 1px 2px #DDD, 0 1px 0 #FFF;
+    border:1px solid #CCC;
+    background:#FFF;
+    margin:0 0 5px;
+    padding:10px;
+    border-radius:5px
+}
+#contact-form button[type="submit"] {
+    cursor:pointer;
+    width:300px;
+    border:none;
+    background:#666;
+    background-image:linear-gradient(bottom, #666 0%, #333 52%);
+    background-image:-moz-linear-gradient(bottom, #666 0%, #333 52%);
+    background-image:-webkit-linear-gradient(bottom, #666 0%, #333 52%);
+    color:#FFF;
+    margin:0 0 5px;
+    padding:10px;
+    border-radius:5px;
+}
+::-webkit-input-placeholder {
+    color:#333;
+}
+:-moz-placeholder {
+    color:#333;
+}
+::-moz-placeholder {
+    color:#333;
+}
+:-ms-input-placeholder {
+    color:#333;
+}
+/*ASIDES & FOOTER
+#####################################################################################
+*/
+
+
+
+#address{
+  float: left;
+  margin-left: 50px;
+  margin-top: 30px;
+  color: #333;
+  font-size: 12px;
+  }
+  
+.address p{
+  color:#CCCCCC;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:12px;
+    line-height:26px;
+  }
+  
+#formulario{
+  float:left;
+  width:400px;
+  margin-left:15px;
+  border-right:1px dotted #CCCCCC;
+  margin-top:30px;
+  }
+  
+.formulario input{
+  font-size:12px;
+  }
+#TTD {
+  font-color: #333;
+  color: #333;
+  } 
+  
+table.formulario tr td{
+  color:#333;
+font-family:Arial, Helvetica, sans-serif;
+font-size:12px;
+  }
+  
+.tit_form{
+   color:#333;
+   font-family:Arial, Helvetica, sans-serif;
+   font-size:12px;
+  }
+    
+aside h3 {
+font-size: 18px;
+}
+</style>
+<? sendEmail.php
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $message = $_POST['message'];
+    $from = 'From: $email'; 
+    $to = 'tenreiroramon@gmail.com'; 
+    $subject = 'From www.tenreiros.com';
+    $human = $_POST['human'];
+			
+    $body = "From: $name\n E-Mail: $email\n Message:\n $message";
+    $header = 'From: '$email"\r\n";
+    $header = "X-Mailer: PHP/".phpversion() ."\r\n";
+    $header = "Mime-Version: 1.0 \r\n";
+    $header = "Content-Type: text/plain";   
+    mail($to, $subject, utf8_decode(($body), $header);
+
+    echo '&estatus=ok&';
+?>
+<script type="text/javascript">
+
+//Validar una dirección de email
+function validacion(){
+ valor = document.getElementsByName("email").value;
+ if( !(/[\w-\.]{3,}@([\w-]{2,}\.)*([\w-]{2,}\.)[\w-]{2,4}/.test(valor)) ) {
+    return false;}
+ return true ; //si quieres enviar el formulario
+
+}
+
+</script>
+</head>
+<body data-spy="scroll" data-target=".bs-docs-sidebar">
+
+<!-- Block languages module -->
+
+    <!-- Navbar
+    ================================================== -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="index.html">Ramon Tenreiro </a><a href="contactes.html" title="Español"><img src="images/sp.jpg" alt="es" width="16" height="11">      </a><img src="images/us16.jpg"alt="en" width="16" height="11">
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="">
+                <a href="index.html">Home</a>
+              </li>
+              <li class="">
+                <a href="aboutme.html">About Me</a>
+              </li>
+              <li class="">
+                <a href="realstate.html">Real State Developer</a>
+              </li>
+              <li class="">
+                <a href="painting.html">Painting</a>
+              </li>
+              <li class="">
+                <a href="internet.html">Internet</a>
+              </li>
+              <li class="active">
+                <a href="contact.html">Stay in touch</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-- Subhead
+================================================== -->
+<header class="jumbotron subhead" id="overview">
+  <div class="container">
+    <h1>Ramon Tenreiro</h1>
+    <p class="lead">Stay in touch with you!</p>
+  </div>
+</header>
+  
+   <div class="row-fluid" class="span12">
+    <div class="span4" id="formulario">
+	   <img src="Imagenes/formulario.fw.png" alt="Contact Form" style="margin-left:4px;" />
+     <form id="contact-form" action="/sendEmail.php" method="post">
+        <h3>Get in touch</h3>
+        <div>
+            <label>
+                <span>Name:</span>
+                <input name="name" type="text" autofocus required  tabindex="1" value="">
+             </label>
+        </div>
+        <div>
+            <label>
+                <span>Email:</span>
+                <input name="email"  type="email" tabindex="2" required>
+            </label>
+        </div>    
+        <div id>
+            <label>
+               <span>Message:</span>
+               <textarea name="message"  tabindex="3" required></textarea>
+            </label>
+        </div>
+        <div>
+         
+            <input type="submit" name="button" onsubmit="return validacion()" value="Send"/>
+            <input type="reset"  name="reset" id="restablecer" value="Reset" />
+        </div>
+        </form>
+      </div><!--cierra formulario-->
+    
+    	<div class="span4 offset4" id="address">
+        <img src="Imagenes/address.fw.png" alt="Address">
+        	 <p>     C/ Emilia Pardo Bazan, 21</p> 
+           <p>     15.005 La Coruña - Spain </p>
+           <p>     Phone: +34 981 92 70 60  </p>
+           <p>     e-mail: ramon@tenreiros.com</p>     	
+      </div>
+      </div><!--cierra direccion-->
+
+  <!-- Footer
+    ===.=============================================== -->
+      <footer class="footer">
+       <div class="container">
+          <p>Designed and built by Ramon Tenreiro. &copy; 2013 </p>
+        </div>  
+        </footer>
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap-transition.js"></script>
+    <script src="assets/js/bootstrap-alert.js"></script>
+    <script src="assets/js/bootstrap-modal.js"></script>
+    <script src="assets/js/bootstrap-dropdown.js"></script>
+    <script src="assets/js/bootstrap-scrollspy.js"></script>
+    <script src="assets/js/bootstrap-tab.js"></script>
+    <script src="assets/js/bootstrap-tooltip.js"></script>
+    <script src="assets/js/bootstrap-popover.js"></script>
+    <script src="assets/js/bootstrap-button.js"></script>
+    <script src="assets/js/bootstrap-collapse.js"></script>
+    <script src="assets/js/bootstrap-carousel.js"></script> 
+
+</body>
+</html>

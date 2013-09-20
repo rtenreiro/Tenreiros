@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Cowgame by Ramon Tenreiro</title>
+
+<script src="libs/easeljs-0.6.0.min.js"></script>
+<script src="libs/tweenjs-0.4.0.min.js"></script>
+<script src="libs/movieclip-0.6.0.min.js"></script>
+<script src="libs/preloadjs-0.3.0.min.js"></script>
+<script src="libs/soundjs-0.4.0.min.js"></script>
+<script src="PlatypusGame.js"></script>
+
+<script>
+var canvas, stage, exportRoot, images;
+var platypii = [];
+var score = 0;
+function init() {
+	canvas = document.getElementById("canvas");
+	images = images;
+	var manifest = [
+		{src:"images/cliff.png", id:"cliff"},
+		{src:"images/co.png", id:"co"},
+		{src:"images/cow.png", id:"cow"},
+		{src:"images/cow2.png", id:"cow2"},
+		{src:"images/cowhead.png", id:"cowhead"},
+		{src:"images/cowhead2.png", id:"cowhead2"},
+		{src:"images/cowl1.png", id:"cowl1"},
+		{src:"images/cowl2.png", id:"cowl2"},
+		{src:"images/cowl3.png", id:"cowl3"},
+		{src:"images/cowl4.png", id:"cowl4"},
+		{src:"images/cowmouth.png", id:"cowmouth"},
+		{src:"images/cowmouthgifcopia.png", id:"cowmouthgifcopia"},
+		{src:"images/cowtail.png", id:"cowtail"},
+		{src:"images/pine.png", id:"pine"},
+		{src:"images/pines.png", id:"pines"},
+		{src:"sounds/pop.mp3", id:"pop"}
+	];
+
+	var loader = new createjs.LoadQueue(false);
+	loader.installPlugin(createjs.Sound);
+	loader.addEventListener("fileload", handleFileLoad);
+	loader.addEventListener("complete", handleComplete);
+	loader.loadManifest(manifest);
+}
+
+function handleFileLoad(evt) {
+	if (evt.item.type == "image") { images[evt.item.id] = evt.result; }
+}
+
+function playSound(name, loop) {
+	SoundJS.play(name, SoundJS.INTERRUPT_EARLY, 0, 0, loop);
+}
+
+
+function handleComplete() {
+	exportRoot = new lib.PlatypusGame2();
+	exportRoot.removeChild(exportRoot.platypus);
+	
+	stage = new createjs.Stage(canvas);
+	stage.addChild(exportRoot);
+	
+	createjs.Ticker.addEventListener("tick", tick);
+	Touch.enable(stage);
+    Ticker.setFPS(8);
+	Ticker.addListener(window);
+	// add the listener to window, so we can do some work before updating the stage:
+}
+
+
+function tick(event) {
+  if (platypii.length < 2 || Math.random() < 0.01 && platypii.length < 5) {
+	var Platypus = new lib.Platypus;
+	Platypus.scaleX = Platypus.scaleY = Math.random()*0.5+0.5;
+	Platypus.x = 800;
+	Platypus.y =  Math.random()*(400-Platypus.scaleY*Platypus.nominalBounds.height);
+	Platypus.velX = (1+Platypus.scaleX)*-6;
+	Platypus.velY = 0;
+	platypii.push(Platypus);
+	exportRoot.addChild(Platypus);
+	// we only want to know about clicks on the balloon, not the whole platypus:
+	//Platypus.PlatypusIdle.balloon.onClick = handleBalloonClick;
+	//Platypus.onPopped = handleBalloonPopped;
+	// we only want to know about clicks on the balloon, not the whole platypus:
+	Platypus.platypusIdle.balloon.onClick = handleBalloonClick;
+	Platypus.onPopped = handleBalloonPopped;
+  } 
+	for (var i=platypii.length-1; i>=0; i--) {
+		Platypus = platypii[i];
+
+		// add gravity to the Y velocity if it's falling:
+		if (Platypus.falling) { Platypus.velY += 3;}
+	    Platypus.x += Platypus.velX;
+	    Platypus.y += Platypus.velY;		
+		if (Platypus.x < -Platypus.nominalBounds.width*Platypus.scaleX || Platypus.y > 400) {
+			platypii.splice(i,1);
+			exportRoot.removeChild(Platypus);
+			// add +100 points if it fell or -500 if it escaped
+			updateScore(Platypus.y > 400 ? 100 : -500);
+		}
+	}
+	stage.addChild(Platypus);		
+	stage.update();
+}
+
+function handleBalloonClick(eventObj) {
+	// eventObj.target is the balloon that was clicked. Grab the platypus instance:
+	var Platypus = eventObj.target.parent.parent;
+	Platypus.gotoAndPlay("pop");
+}
+
+function handleBalloonPopped(Platypus) {
+	Platypus.falling = true;
+	
+}
+
+function updateScore(delta) {
+	score = Math.max(0,score + delta);
+	exportRoot.scoreTxt.text = "SCORE: "+score;
+}
+
+
+</script>
+</head>
+
+<body onload="init();" style="background-color:#D4D4D4">
+	<canvas id="canvas" width="800" height="400" style="background-color:#ffffff"></canvas>
+</body>
+</html>

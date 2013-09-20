@@ -1,0 +1,34 @@
+
+Sharing creations with you!
+
+I'm Ramon Tenreiro and I like to create things. This site is the opportunity for me to share some of them with you.
+
+Would you like to look at my paintings?
+
+Sharing my projects with you
+
+Would you like to look some phots of my architecture?
+
+Would you like to share with you some of my buildings?
+
+ I grew up in architecture as my grandfather, and my father are architects too. Since I can remember, I have always looked at buildings, gardens, cities. Although I like the modern architecture, I love the timeless architecture. Looking deep in myself, I'm loving the true beauty that time doesn't wither. This gif shows you some of the spaces that I have created  afther that I have fed it with my heart.
+
+For the past 8 years, I have been building a full range of residential homes and communities. This is an example of construction of 22 apartments in Ferrol to develop an urban project called "AEI-V". The AEI-V a public square, 4 streets, 4 blocks of apartments and all of necesary facilities. This is the fourth block and it was built from march 2007 until septembre 2008 and it required an investment of 2,8 million euros.
+    I assumed full responsabilities; buying land, negotiating with banks, hiring, controlling, managing, marketing and sales.
+
+Building 4th Block - Ferrol between March 2007 and September 2008
+
+Painting by Ramon Tenreiro
+
+I have been painting since I was about eight years old -in those endless summers in Esteiro- and I do it to please myself. My inner world becomes the stage with which I can observe and learn to understand. It expresses what is going on inside of me and the way I view the world.
+
+I have eyes for colors. I can see the beauty of the world around me. This perfect beauty, could only be given to us by God. Therefore, for me painting is like praying. Expressing what I see through myself
+
+
+Games
+
+I have completed the course "An introduction to Interactive Programming in Python" from Rice University, Dallas(the U.S.). These are the games that I made programming in Python.
+Choose the one you want to play -click on the link-. On the CodeSkulptor, you can see the program. To play, just press play and a new screen will open and now you can play On !
+note: CodeSkulptor runs in Chrome 18+, Firefox 11+, and Safari 6+.Some features may work in other browsers, but do not expect full functionality.  It does NOT run in Internet Explorer.
+
+Instructions: This game was my first and it is very simple. When you press "play" the game radomizes five bets for the player and confronted with the five from the computer and displaying who is the winner

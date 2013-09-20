@@ -1,0 +1,499 @@
+﻿/* CSS Document 
+
+ Ramon Tenreiro CSS
+##########################################################################################
+
+TABLE OF CONTENTS:
+
+1. General
+2. DIVS
+3. Basic
+4. Segments
+5. Images
+6. Digg
+7. Related Posts
+8. Horizontal Rule
+9. Quote
+10. Icon Links
+11. Facebook
+12. Contact Form
+13. Tabber
+-13.1 Tabber Alternate Style - Boxed
+-13.2 Tabber Alternate Style - Vertical
+14. Dropcap
+15. Content Toggle
+-15.1 Toggle Alternate Style - White
+16. Highlight and Abbreviation
+17. List Styles - Unordered List
+18. List Styles - Ordered List
+19. Social Icon
+############################################################################################
+ 1.General 
+############################################################################################
+*/
+
+@charset "utf-8";
+* {margin: 0;padding: 0;}
+
+html, body {width: 100%; height: 100%;}
+
+header, footer, section, aside, nav, article {display: block;}
+
+/*
+#############################################################################################
+2. DIVS 
+#############################################################################################
+*/
+
+body {
+	line-height: 1;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #666;
+	margin: 0 auto;
+	font-size: 16px;
+	line-height: normal;
+	font-weight: normal;
+}
+	
+#wrapper {
+     margin: 0 auto;
+     width: 1010px
+     /*background: url(Imagenes/fondo.fw.png) repeat-x;*/
+}
+
+header {
+     width: 100%;
+     float: left;
+     height: 100px;
+     margin: 0 auto;
+}
+
+nav {
+	width: 100%;
+	float: left;
+	height: 50px;
+	margin: 0 auto;
+}
+
+#main {
+    float: left;
+    width: 100%;
+    height : 400px;
+    margin: 0 auto;
+}
+
+
+footer {
+     width: 100%;
+     margin: 0 auto;
+     clear: both;
+}
+
+/*
+###########################################################################################################
+3. BASICS 
+###########################################################################################################
+*/
+
+h1,h2,h3,h4 {
+font-weight: bold;
+clear: both;
+color: #333;
+}
+
+a:link, a:visited {
+color:#000;
+text-decoration: none;
+}
+
+a:hover, a:active {
+color: #09C;
+text-decoration: none;
+
+}
+
+#copyright {
+	width: 100%;
+	color: #333;
+	float:left;
+	background-color:#CCC
+	clear: both;
+	font-size: 10px;
+	font-weight: bold;
+	text-align: center;
+	height: 50 px
+	margin-top: 10px;
+	margin-bottom: 10px
+}
+
+p {
+margin: 20px;
+}
+
+li {
+padding-left: 2px;
+}
+
+
+/*
+MENUS
+#####################################################################################
+*/
+
+nav .menu {
+font-size: 30px;
+display: inline;	
+}
+
+nav .menu ul {
+margin: 0;
+padding: 5px 0 0 7px;
+list-style: none;
+line-height: normal;
+}
+
+nav .menu li {
+display: block;
+float: left;
+padding-right: 20px;
+}
+
+nav .menu a {
+display: block;
+float: left;
+margin-right: 5px;
+padding: 0px 5px;
+text-decoration: none;
+}
+
+nav .menu a:hover {
+text-decoration:!important;
+}
+
+/*
+HEADER
+#####################################################################################
+*/
+
+header h1, header p {
+margin: 0;
+line-height: normal;
+}
+
+header h1 { 	
+float: left;
+padding-top: 5px; 
+}
+
+header h1 a:link, header h1 a:visited {
+text-decoration: none;
+color: #666;
+}
+
+header h1 a:hover { 
+text-decoration: underline; 
+}
+
+header p {
+padding: 8px 0 0 3px;
+width: 100%;
+font-style: italic;
+font-size: 14px;
+color: #333;
+}
+
+
+/*
+ARTICLES, CONTENT, ALIGN
+#####################################################################################
+*/
+
+article img {
+border: none;
+-webkit-box-shadow: 3px 3px 7px #666;
+-moz-box-shadow: 3px 3px 7px #777;
+}
+
+
+#main ul ul, ol ol, ul ol, ol ul {
+margin-bottom: 0;
+}
+
+#main h1, h2, h3, h4 {
+color: #333;
+margin: 15px;
+}
+
+.alignleft, img.alignleft {
+display: inline;
+float: left;
+margin-right: 24px;
+margin-top: 4px;
+}
+
+.alignright, img.alignright {
+display: inline;
+float: right;
+margin-left: 24px;
+margin-top: 4px;
+}
+
+.aligncenter, img.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	color: #333;
+	font-size: 24px;
+}
+
+img.alignleft, img.alignright, img.aligncenter {
+margin-bottom: 12px;
+}
+/*
+contact form
+#####################################################################################
+*/
+#input, #contact-form, #contact-form textarea {
+    width:100%;
+    background:#efefef;
+    border:1px solid #dedede;
+    padding:10px;
+    margin-top:3px;
+    font-size:0.9em;
+    color:#3a3a3a;
+    border-radius:5px;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form input[type="tel"],
+#contact-form input[type="url"],
+#contact-form textarea {
+	width:300px;
+	box-sizing: 300 px;
+    box-shadow:inset 0 1px 2px #DDD, 0 1px 0 #FFF;
+    -webkit-box-shadow:inset 0 1px 2px #DDD, 0 1px 0 #FFF;
+    -moz-box-shadow:inset 0 1px 2px #DDD, 0 1px 0 #FFF;
+    border:1px solid #CCC;
+    background:#FFF;
+    margin:0 0 5px;
+    padding:10px;
+    border-radius:5px
+}
+#contact-form button[type="submit"] {
+    cursor:pointer;
+    width:300px;
+    border:none;
+    background:#666;
+    background-image:linear-gradient(bottom, #666 0%, #333 52%);
+    background-image:-moz-linear-gradient(bottom, #666 0%, #333 52%);
+    background-image:-webkit-linear-gradient(bottom, #666 0%, #333 52%);
+    color:#FFF;
+    margin:0 0 5px;
+    padding:10px;
+    border-radius:5px;
+}
+::-webkit-input-placeholder {
+    color:#333;
+}
+:-moz-placeholder {
+    color:#333;
+}
+::-moz-placeholder {
+    color:#333;
+}
+:-ms-input-placeholder {
+    color:#333;
+}
+
+/*
+ASIDES & FOOTER
+#####################################################################################
+*/
+
+.cont_menu{
+	padding-top:15px;
+	overflow:hidden;
+	
+	}
+
+#address{
+	float: left;
+	margin-left: 18px;
+	margin-top: 30px;
+	color: #333;
+	font-size: 12px;
+	}
+	
+.address p{
+	color:#CCCCCC;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:12px;
+    line-height:26px;
+	}
+	
+#formulario{
+	float:left;
+	width:400px;
+	margin-left:15px;
+    color: #C30;
+	border-right:1px dotted #CCCCCC;
+	margin-top:30px;
+	}
+	
+.formulario input{
+	font-size:12px;
+	}
+#TTD {
+	font-color: #333;
+	color: #333;
+	}	
+	
+table.formulario tr td{
+	color:#333;
+font-family:Arial, Helvetica, sans-serif;
+font-size:12px;
+	}
+	
+.tit_form{
+   color:#333;
+   font-family:Arial, Helvetica, sans-serif;
+   font-size:12px;
+	}
+		
+aside h3 {
+font-size: 18px;
+}
+
+aside ul {
+list-style: inside;
+color: #666;
+margin-bottom: 10px;
+
+}
+
+#footer-area {
+color: #333;
+clear: both;
+font-size: 90%;
+padding: 8px 0;
+/*overflow: hidden;*/
+}
+
+.footer-segment {
+background: #CCC;
+float: left;
+margin: 0 auto;
+padding: 5px;
+margin-right: 10px;
+margin-left: 10px;
+width: 190px;
+
+}
+
+footer p {
+margin-top: -1px;
+}
+
+/*
+###########################################################################################################
+4. IMAGES
+###########################################################################################################
+*/
+
+.img
+  {
+  margin:2px;
+  height:auto;
+  width:auto;
+  float:left;
+  text-align:center;
+  }
+.img img
+  {
+  display:inline;
+  margin:3px;
+  border:1px solid #ffffff;
+  }
+.img a:hover img
+  {
+  border:1px solid #0000ff;
+  }
+  
+.desc
+  {
+	text-align: center;
+	font-size: 12px;
+	font-weight: normal;
+	margin: 2px;
+	line-height: normal;
+	letter-spacing: normal;
+	vertical-align: middle;
+	word-spacing: normal;
+	white-space: normal;
+	height: auto;
+  }
+
+#image-wrap {
+	-webkit-box-shadow: inset 0 0 4px rgba(0,0,0,1), inset 0 2px 1px rgba(255,255,255,.5), inset 0 -9px 2px rgba(0,0,0,.6), inset 0 -12px 2px rgba(255,255,255,.3);
+	-moz-box-shadow: inset 0 0 4px rgba(0,0,0,1), inset 0 2px 1px rgba(255,255,255,.5), inset 0 -9px 2px rgba(0,0,0,.6), inset 0 -12px 2px rgba(255,255,255,.3);
+	box-shadow: inset 0 0 4px rgba(0,0,0,1), inset 0 2px 1px rgba(255,255,255,.5), inset 0 -9px 2px rgba(0,0,0,.6), inset 0 -12px 2px rgba(255,255,255,.3);
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+}
+#textoBlancoMargen {
+	color: #FFF;
+	text-align: justify;
+	margin-top: 5px;
+	margin-left: 5px;
+}
+
+
+/*
+###########################################################################################################
+5. BUTTONS
+###########################################################################################################
+*/
+#button
+{
+color: rgb(52, 150, 73);
+font-size: 18px;
+padding: 4px;
+text-shadow: 0px -1px 0px rgba(30, 30, 30, 0.8);
+-webkit-border-radius: 30px;
+-moz-border-radius: 30px;
+border-radius: 30px;
+background: rgb(163, 166, 13);
+background: -moz-linear-gradient(89deg, rgb(163, 166, 13) 49%, rgb(214, 161, 59) 58%);
+background: -webkit-linear-gradient(89deg, rgb(163, 166, 13) 49%, rgb(214, 161, 59) 58%);
+background: -o-linear-gradient(89deg, rgb(163, 166, 13) 49%, rgb(214, 161, 59) 58%);
+background: -ms-linear-gradient(89deg, rgb(163, 166, 13) 49%, rgb(214, 161, 59) 58%);
+background: linear-gradient(359deg, rgb(163, 166, 13) 49%, rgb(214, 161, 59) 58%);
+-webkit-box-shadow: 13px 13px 12px rgba(50, 50, 50, 0.75);
+-moz-box-shadow:    13px 13px 12px rgba(50, 50, 50, 0.75);
+box-shadow:         13px 13px 12px rgba(50, 50, 50, 0.75);
+
+}
+#paginatitle {
+	font-weight: bold;
+	font-size: 36px;
+	font-color: #333;
+	margin-top: 10px;
+	margin-left: 10px;
+	padding-top: 5px;
+	padding-left: 5px;
+	margin-bottom: 5px;
+	color: #333;
+}
+#pagedescrition {
+	padding: 0px;
+	font-color: #666;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 5px;
+	font-weight: normal;
+}
